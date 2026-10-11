@@ -1,0 +1,7 @@
+server/config.json
+server/*.log
+server/__pycache__/
+server/.venv/
+*.pyc
+*.tmp
+.DS_Store
