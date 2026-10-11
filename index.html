@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="NEXDRIVE personal file explorer and media server">
+  <title>NEXDRIVE — Created By Shiv Yogi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-orb"></div>
+    <div class="brand-mark">N</div>
+    <div class="splash-name">NEXDRIVE</div>
+    <div class="splash-tag">Your Files · Your Media · Your Drive</div>
+    <div class="splash-credit">Created By Shiv Yogi</div>
+    <div class="loading-line"><span></span></div>
+    <button id="skipIntro" class="text-button">Skip intro</button>
+  </div>
+
+  <main id="app" class="app hidden">
+    <aside class="sidebar glass">
+      <a class="brand" href="#" data-page="dashboard"><span class="brand-mini">N</span><span>NEXDRIVE<small>PERSONAL DRIVE</small></span></a>
+      <nav id="nav">
+        <button class="nav-item active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+        <button class="nav-item" data-page="files">▤ <span>File Explorer</span></button>
+        <button class="nav-item" data-page="media">♫ <span>Media Player</span></button>
+        <button class="nav-item" data-page="upload">↑ <span>Upload Files</span></button>
+        <button class="nav-item" data-page="favorites">☆ <span>Favorites</span></button>
+        <button class="nav-item" data-page="recent">◷ <span>Recently Opened</span></button>
+        <button class="nav-item" data-page="status">◉ <span>Server Status</span></button>
+        <button class="nav-item" data-page="settings">⚙ <span>Settings</span></button>
+      </nav>
+      <div class="sidebar-footer"><span class="status-dot"></span> Private library<br><small>Created By Shiv Yogi</small></div>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar glass">
+        <div><button id="mobileMenu" class="icon-btn mobile-only" aria-label="Open menu">☰</button><span class="eyebrow">PERSONAL CLOUD</span><h1 id="pageTitle">Dashboard</h1></div>
+        <div class="top-actions"><span id="connectionPill" class="pill offline">● Server offline</span><button id="themeToggle" class="icon-btn" title="Toggle theme">☼</button><button id="connectBtn" class="primary small">Connect</button></div>
+      </header>
+      <div id="connectionNotice" class="notice warning"><strong>Backend not connected.</strong> This website is only the interface. Start the Python server on your phone, then enter its reachable URL in Settings.</div>
+      <div id="pageContent" class="page-content"></div>
+      <footer class="footer">NEXDRIVE <span>•</span> Created By Shiv Yogi <span class="footer-right">Your data stays on your devices.</span></footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
